@@ -1,0 +1,2 @@
+# PlantEasy
+Plant Guidance Platform
