@@ -2,37 +2,45 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "1rem 2rem",
-        backgroundColor: "#2e7d32",
-        color: "white",
-      }}
-    >
-      <h2>🌱 PlantEasy</h2>
-
-      <div style={{ display: "flex", gap: "20px" }}>
-        <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-          Home
-        </Link>
-
-        <Link to="/about" style={{ color: "white", textDecoration: "none" }}>
-          About
-        </Link>
-
+    <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-green-100">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
         <Link
-          to="/dashboard"
-          style={{ color: "white", textDecoration: "none" }}
+          to="/"
+          className="text-2xl font-bold text-green-700 flex items-center gap-2"
         >
-          Dashboard
+          🌱 PlantEasy
         </Link>
 
-        <Link to="/login" style={{ color: "white", textDecoration: "none" }}>
-          Login
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/"
+            className="text-gray-700 hover:text-green-600 transition"
+          >
+            Home
+          </Link>
+
+          <Link
+            to="/about"
+            className="text-gray-700 hover:text-green-600 transition"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/dashboard"
+            className="text-gray-700 hover:text-green-600 transition"
+          >
+            Dashboard
+          </Link>
+
+          <Link
+            to="/login"
+            className="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </nav>
   );
