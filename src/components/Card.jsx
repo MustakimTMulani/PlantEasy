@@ -1,7 +1,8 @@
-function Card({ title, description, emoji }) {
+function Card({ title, description, emoji, color }) {
   return (
-    <div className="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
-
+    <div
+      className={`bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 ${color}`}
+    >
       <div className="text-5xl mb-5">
         {emoji}
       </div>
@@ -14,10 +15,9 @@ function Card({ title, description, emoji }) {
         {description}
       </p>
 
-      <div className="mt-6 text-green-600 font-semibold group-hover:translate-x-1 transition">
+      <div className="mt-6 font-semibold text-green-600">
         Learn More →
       </div>
-
     </div>
   );
 }

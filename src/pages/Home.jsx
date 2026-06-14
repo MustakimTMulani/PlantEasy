@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-green-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
 
       <Hero />
 
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="max-w-6xl mx-auto px-6 py-20">
         
         <div className="text-center mb-10">
         <h2 className="text-4xl font-bold mb-3">
@@ -27,24 +27,32 @@ function Home() {
           <Card
             emoji="🌱"
             title="Plant Library"
-            description="Browse detailed information about crops, plants, growing conditions, and care requirements."
+            description="Browse detailed information about crops, plants, and cultivation."
+            color="border-green-500"
             />
 
             <Card
             emoji="🩺"
             title="Plant Health"
-            description="Learn about common plant diseases, symptoms, prevention methods, and treatment guidance."
+            description="Identify diseases, symptoms, and preventive measures."
+            color="border-blue-500"
             />
 
             <Card
             emoji="⏰"
             title="Smart Reminders"
-            description="Track watering, fertilizing, pruning, and maintenance schedules with ease."
+            description="Track watering, fertilizing, and maintenance schedules."
+            color="border-orange-500"
             />
 
         </div>
+    
       </section>
+    
+    <Footer />
+
     </div>
+
   );
 }
 

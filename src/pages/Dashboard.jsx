@@ -35,27 +35,47 @@ function Dashboard() {
 
         </div>
 
+        <div className="grid md:grid-cols-2 gap-6">
+
         <div className="bg-white rounded-3xl p-8 shadow-md">
-
-          <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-2xl font-bold mb-6">
             Recent Activity
-          </h2>
+            </h2>
 
-          <div className="space-y-4">
-
+            <div className="space-y-4">
             <div className="p-4 bg-gray-50 rounded-xl">
-              🌱 Added Tomato Plant
+                🌱 Added Tomato Plant
             </div>
 
             <div className="p-4 bg-gray-50 rounded-xl">
-              ⏰ Watering Reminder Created
+                🩺 Viewed Plant Health Guide
             </div>
 
             <div className="p-4 bg-gray-50 rounded-xl">
-              🩺 Checked Plant Health Guide
+                ⏰ Reminder Created
+            </div>
+            </div>
+        </div>
+
+        <div className="bg-white rounded-3xl p-8 shadow-md">
+            <h2 className="text-2xl font-bold mb-6">
+            Upcoming Tasks
+            </h2>
+
+            <div className="space-y-4">
+            <div className="p-4 bg-green-50 rounded-xl">
+                💧 Water Rose Plant
             </div>
 
-          </div>
+            <div className="p-4 bg-green-50 rounded-xl">
+                🌿 Fertilize Basil
+            </div>
+
+            <div className="p-4 bg-green-50 rounded-xl">
+                🍅 Check Tomato Growth
+            </div>
+            </div>
+        </div>
 
         </div>
 

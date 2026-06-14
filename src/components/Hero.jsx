@@ -33,8 +33,11 @@ function Hero() {
             </button>
           </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
 
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-28">
+            
             <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-3xl font-bold text-green-600">500+</h3>
                 <p className="text-gray-600">Plants & Crops</p>
@@ -53,21 +56,7 @@ function Hero() {
             </div>
 
 
-          <div className="flex flex-wrap justify-center gap-4">
 
-            <div className="bg-white shadow-md rounded-xl px-5 py-3">
-              🌱 Plant Library
-            </div>
-
-            <div className="bg-white shadow-md rounded-xl px-5 py-3">
-              🤖 AI Assistant
-            </div>
-
-            <div className="bg-white shadow-md rounded-xl px-5 py-3">
-              ⏰ Smart Reminders
-            </div>
-
-          </div>
 
         </div>
 
