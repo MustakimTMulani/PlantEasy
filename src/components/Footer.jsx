@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoIcon from "../assets/logo-icon.png";
 
 function Footer() {
   return (
@@ -8,9 +9,17 @@ function Footer() {
         <div className="grid md:grid-cols-2 gap-10">
 
           <div>
-            <h2 className="text-3xl font-bold mb-4">
-              🌱 PlantEasy
+            <div className="flex items-center gap-3 mb-4">
+            <img
+              src={logoIcon}
+              alt="PlantEasy"
+              className="h-10 w-10"
+            />
+
+            <h2 className="text-3xl font-bold">
+              PlantEasy
             </h2>
+          </div>
 
             <p className="text-green-200 max-w-md">
               Helping farmers, gardeners, and plant enthusiasts
@@ -20,17 +29,27 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">
-              Quick Links
-            </h3>
+          <h3 className="font-semibold mb-4">
+            Quick Links
+          </h3>
 
-            <div className="flex flex-col gap-2 text-green-200">
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/dashboard">Dashboard</Link>
-              <Link to="/login">Login</Link>
-            </div>
+          <div className="flex flex-col gap-2 text-green-200 mb-6">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/login">Login</Link>
           </div>
+
+          <h3 className="font-semibold mb-3">
+            Connect
+          </h3>
+
+          <div className="flex gap-4 text-2xl">
+            <span title="Email">📧</span>
+            <span title="LinkedIn">💼</span>
+            <span title="GitHub">🐙</span>
+          </div>
+        </div>
 
         </div>
 

@@ -10,14 +10,14 @@ function Home() {
 
       <Hero />
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-24">
         
         <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold mb-3">
+        <h2 className="text-5xl font-bold mb-4 text-gray-900">
             Powerful Features
         </h2>
 
-        <p className="text-gray-600">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Everything you need to manage plants and crops efficiently.
         </p>
         </div>
@@ -28,21 +28,21 @@ function Home() {
             emoji="🌱"
             title="Plant Library"
             description="Browse detailed information about crops, plants, and cultivation."
-            color="border-green-500"
+            color="border-green-200"
             />
 
             <Card
             emoji="🩺"
             title="Plant Health"
             description="Identify diseases, symptoms, and preventive measures."
-            color="border-blue-500"
+            color="border-blue-200"
             />
 
             <Card
             emoji="⏰"
             title="Smart Reminders"
             description="Track watering, fertilizing, and maintenance schedules."
-            color="border-orange-500"
+            color="border-orange-200"
             />
 
         </div>
