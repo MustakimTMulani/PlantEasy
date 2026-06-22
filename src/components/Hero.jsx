@@ -2,7 +2,7 @@ import logoIcon from "../assets/logo-icon.png";
 
 function Hero() {
   return (
-    <section className="bg-gradient-to-br from-green-50 via-white to-green-100 overflow-hidden">
+    <section className="bg-gradient-to-br from-green-50 via-white to-green-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -10,7 +10,7 @@ function Hero() {
           {/* LEFT SIDE */}
           <div>
 
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <img
                 src={logoIcon}
                 alt="PlantEasy"
@@ -19,7 +19,7 @@ function Hero() {
               Plant Care & Agricultural Knowledge Platform
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
               Grow Smarter.
               <br />
               <span className="text-green-600">
@@ -27,7 +27,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8 max-w-xl">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
               PlantEasy helps farmers, gardeners, and plant enthusiasts
               access plant knowledge, manage care schedules, monitor plant
               health, and receive guidance for better growth.
@@ -44,19 +44,19 @@ function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <div className="bg-white px-4 py-2 rounded-xl shadow-sm">
+              <div className="bg-white dark:bg-gray-800 dark:text-white px-4 py-2 rounded-xl shadow-sm">
                 🌱 Plant Library
               </div>
 
-              <div className="bg-white px-4 py-2 rounded-xl shadow-sm">
+              <div className="bg-white dark:bg-gray-800 dark:text-white px-4 py-2 rounded-xl shadow-sm">
                 🩺 Plant Health
               </div>
 
-              <div className="bg-white px-4 py-2 rounded-xl shadow-sm">
+              <div className="bg-white dark:bg-gray-800 dark:text-white px-4 py-2 rounded-xl shadow-sm">
                 ⏰ Care Reminders
               </div>
 
-              <div className="bg-white px-4 py-2 rounded-xl shadow-sm">
+              <div className="bg-white dark:bg-gray-800 dark:text-white px-4 py-2 rounded-xl shadow-sm">
                 🤖 AI Guidance
               </div>
             </div>
@@ -66,7 +66,7 @@ function Hero() {
           {/* RIGHT SIDE */}
           <div>
 
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-green-100">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 border border-green-100 dark:border-gray-700">
 
               <div className="flex items-center gap-3 mb-6">
                 <img
@@ -75,7 +75,7 @@ function Hero() {
                   className="h-10 w-10"
                 />
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                   PlantEasy
                 </h3>
               </div>
@@ -99,12 +99,12 @@ function Hero() {
 
               </div>
 
-              <div className="mt-6 p-4 bg-gray-50 rounded-xl">
+              <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
                 <p className="font-semibold mb-2">
                   Featured Services
                 </p>
 
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                   <li>🌱 Plant Information Library</li>
                   <li>🩺 Plant Health Knowledge Base</li>
                   <li>⏰ Care Reminder System</li>

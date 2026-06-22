@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import PlantDetails from "./pages/PlantDetails";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Showcase from "./pages/Showcase";
+import AIAssistant from "./pages/AIAssistant";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -33,10 +34,12 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+          <Route path="/assistant" element={<AIAssistant />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/plant-details" element={<PlantDetails />} />
           <Route path="/showcase" element={<Showcase />} />
         </Routes>
       </BrowserRouter>

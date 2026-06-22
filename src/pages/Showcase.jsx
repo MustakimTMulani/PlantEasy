@@ -1,11 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Button from "../components/ui/Button";
-import Input from "../components/ui/Input";
-import Loader from "../components/ui/Loader";
 import { useState } from "react";
-import Modal from "../components/ui/Modal";
-import Toast from "../components/ui/Toast";
+import {
+  Button,
+  Input,
+  Loader,
+  Modal,
+  Toast,
+} from "../components/ui";
 
 function Showcase() {
   const [isModalOpen, setIsModalOpen] = useState(false);

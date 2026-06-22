@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       <Navbar />
 
       <Hero />
@@ -13,11 +13,11 @@ function Home() {
       <section className="max-w-7xl mx-auto px-6 py-24">
         
         <div className="text-center mb-10">
-        <h2 className="text-5xl font-bold mb-4 text-gray-900">
+        <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Powerful Features
         </h2>
 
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Everything you need to manage plants and crops efficiently.
         </p>
         </div>

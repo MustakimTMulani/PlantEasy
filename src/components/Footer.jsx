@@ -34,10 +34,10 @@ function Footer() {
           </h3>
 
           <div className="flex flex-col gap-2 text-green-200 mb-6">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/" className="hover:text-white transition">Home</Link>
+            <Link to="/about" className="hover:text-white transition">About</Link>
+            <Link to="/dashboard" className="hover:text-white transition">Dashboard</Link>
+            <Link to="/login" className="hover:text-white transition">Login</Link>
           </div>
 
           <h3 className="font-semibold mb-3">
@@ -45,16 +45,16 @@ function Footer() {
           </h3>
 
           <div className="flex gap-4 text-2xl">
-            <span title="Email">📧</span>
-            <span title="LinkedIn">💼</span>
-            <span title="GitHub">🐙</span>
+            <span title="Email" className="hover:scale-110 transition cursor-pointer">📧</span>
+            <span title="LinkedIn" className="hover:scale-110 transition cursor-pointer">💼</span>
+            <span title="GitHub" className="hover:scale-110 transition cursor-pointer">🐙</span>
           </div>
         </div>
 
         </div>
 
         <div className="border-t border-green-900 mt-10 pt-6 text-green-300 text-sm">
-          Built with React, FastAPI & Gemini AI • © 2026 PlantEasy
+          Built with React, Tailwind CSS & Modern Web Technologies • © 2026 PlantEasy
         </div>
 
       </div>
