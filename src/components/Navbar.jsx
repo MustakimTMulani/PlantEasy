@@ -85,6 +85,12 @@ function Navbar() {
               🔐 Login
             </Link>
 
+            <Link
+              to="/plants"
+              className="text-gray-700 dark:text-gray-200 hover:text-green-600 transition font-medium"
+            >
+              Plant Library
+            </Link>
           </div>
         )}
 

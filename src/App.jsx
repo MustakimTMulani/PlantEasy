@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Showcase from "./pages/Showcase";
 import AIAssistant from "./pages/AIAssistant";
+import PlantLibrary from "./pages/PlantLibrary";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -34,6 +35,7 @@ function App() {
 
       <BrowserRouter>
         <Routes>
+          <Route path="/plants" element={<PlantLibrary />} />
           <Route path="/assistant" element={<AIAssistant />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -41,6 +43,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/plant-details" element={<PlantDetails />} />
           <Route path="/showcase" element={<Showcase />} />
+          <Route path="/plants/:id" element={<PlantDetails />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,7 +1,56 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import Loader from "../components/ui/Loader";
+import Toast from "../components/ui/Toast";
+
+import { getPlant } from "../services/api";
+
 function PlantDetails() {
+  const { id } = useParams();
+
+  const [plant, setPlant] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  useEffect(() => {
+    async function loadPlant() {
+      try {
+        const data = await getPlant(id);
+        setPlant(data);
+      } catch (error) {
+        console.error(error);
+        setToastMessage("Failed to load plant.");
+        setShowToast(true);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadPlant();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (!plant) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        Plant not found.
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       <Navbar />
@@ -17,41 +66,30 @@ function PlantDetails() {
           <div className="p-8">
 
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Basil Plant
+              {plant.name}
             </h1>
 
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              A popular aromatic herb commonly used in cooking and easy to grow in gardens and containers.
+              Information loaded directly from the FastAPI backend.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
 
               <div className="bg-green-50 dark:bg-green-900/30 rounded-2xl p-5">
                 <h3 className="font-bold mb-2">💧 Watering</h3>
-                <p>Keep soil moist but not waterlogged.</p>
+                <p>{plant.watering}</p>
               </div>
 
               <div className="bg-yellow-50 dark:bg-yellow-900/30 rounded-2xl p-5">
                 <h3 className="font-bold mb-2">☀️ Sunlight</h3>
-                <p>Requires 6–8 hours of sunlight daily.</p>
+                <p>{plant.sunlight}</p>
               </div>
 
               <div className="bg-blue-50 dark:bg-blue-900/30 rounded-2xl p-5">
                 <h3 className="font-bold mb-2">🌱 Soil</h3>
-                <p>Rich, well-draining soil is ideal.</p>
+                <p>{plant.soil}</p>
               </div>
 
-            </div>
-
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Plant Information
-              </h2>
-
-              <p className="text-gray-600 dark:text-gray-300">
-                Basil grows best in warm environments and should be watered regularly.
-                It is widely used in culinary dishes and can be grown indoors or outdoors.
-              </p>
             </div>
 
           </div>
@@ -59,6 +97,12 @@ function PlantDetails() {
         </div>
 
       </main>
+
+      <Toast
+        message={toastMessage}
+        isVisible={showToast}
+        onClose={() => setShowToast(false)}
+      />
 
       <Footer />
     </div>
